@@ -3,14 +3,15 @@ package com.pricetracker.price_tracker.service;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.pricetracker.price_tracker.Repositories.ProductRepository;
 import com.pricetracker.price_tracker.entity.Product;
 
 @Service
-public class ProductSerevice {
-
+public class ProductService {
+    @Autowired
     private ProductRepository prodrepo;
 
     public Product saveProduct(Product product){
